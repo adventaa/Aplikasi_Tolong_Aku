@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="401dp"
+        android:layout_height="116dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/boxmerah1">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="113dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="484dp"
+            android:background="@drawable/boxputih1">
+
+            <ImageButton
+                android:id="@+id/button_sar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="286dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/sar" />
+
+            <ImageButton
+                android:id="@+id/button_rs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="169dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="127dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/rumah_sakit" />
+
+            <ImageButton
+                android:id="@+id/button_polisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="111dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="185dp"
+                android:layout_marginBottom="59dp"
+                android:src="@drawable/polisi" />
+
+            <ImageButton
+                android:id="@+id/button_pemadam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="242dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/pemadam" />
+
+            <ImageButton
+                android:id="@+id/button_ambulance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="226dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="56dp"
+                android:src="@drawable/ambulan" />
+
+            <ImageButton
+                android:id="@+id/button_dial"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="299dp"
+                android:layout_marginBottom="57dp"
+                android:background="@color/white"
+                android:contentDescription="Telepon"
+                android:onClick="makePhoneCall"
+                android:src="@drawable/emergency_call" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:text="Layanan apa yang anda butuhkan?"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="391dp"
+        android:layout_height="168dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="160dp"
+        android:background="@drawable/boxputih2" />
+
+    <RelativeLayout
+        android:layout_width="391dp"
+        android:layout_height="168dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="620dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/boxputih3" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="285dp"
+        android:text="News of The Day"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="625dp"
+        android:text="Ulasan Layanan Bantuan"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/masukkanulasan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="700dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/backgroundulasan"
+        android:hint="Write Here ..."
+        android:paddingLeft="50dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="708dp"
+        android:src="@drawable/comment" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="663dp"
+        android:src="@drawable/star" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="663dp"
+        android:src="@drawable/star" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="663dp"
+        android:src="@drawable/star" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="663dp"
+        android:src="@drawable/star" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="663dp"
+        android:src="@drawable/star" />
+
+
+</RelativeLayout>

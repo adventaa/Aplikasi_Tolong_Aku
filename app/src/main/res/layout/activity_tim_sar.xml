@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark"
+    tools:context=".Tim_sar">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="255dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="448dp"
+        android:text="Sesuaikan dengan lokasimu!"
+        android:textColor="@color/white"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="67dp"
+        android:layout_height="62dp"
+        android:background="#FE8700"
+        app:srcCompat="@drawable/skip_back_2"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="191dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="486dp"
+        app:srcCompat="@drawable/sar"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_nama"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="468dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="196dp"
+        android:hint="Masukkan nama">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_nama"
+            android:layout_width="269dp"
+            android:layout_height="57dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="384dp"
+            android:layout_marginEnd="29dp"
+            android:background="@drawable/shape_input"
+            android:layout_marginBottom="280dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_nomor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="554dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="110dp"
+        android:hint="Masukkan nomor telepon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_nomor"
+            android:layout_width="269dp"
+            android:layout_height="57dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="384dp"
+            android:layout_marginEnd="29dp"
+            android:background="@drawable/shape_input"
+            android:layout_marginBottom="280dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_tolong"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="631dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/white"
+        android:text="Tolong Aku!"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/black"
+        android:textColorLink="@color/black"
+        app:iconTint="@color/white" />
+
+</RelativeLayout>
