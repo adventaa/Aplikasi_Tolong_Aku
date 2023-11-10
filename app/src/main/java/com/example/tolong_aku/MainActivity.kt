@@ -2,6 +2,7 @@ package com.example.tolong_aku
 
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -14,53 +15,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val buttonClick: ImageButton = findViewById(R.id.button_dial)
+        val buttonClick: Button = findViewById(R.id.buttonuser)
         buttonClick.setOnClickListener(this)
 
-        val buttonClick2: ImageButton = findViewById(R.id.button_polisi)
+        val buttonClick2: Button = findViewById(R.id.buttonhelper)
         buttonClick2.setOnClickListener(this)
 
-        val buttonClick3: ImageButton = findViewById(R.id.button_ambulance)
-        buttonClick3.setOnClickListener(this)
-
-        val buttonClick4: ImageButton = findViewById(R.id.button_pemadam)
-        buttonClick4.setOnClickListener(this)
-
-        val buttonClick5: ImageButton = findViewById(R.id.button_rs)
-        buttonClick5.setOnClickListener(this)
-
-        val buttonClick6: ImageButton = findViewById(R.id.button_sar)
-        buttonClick6.setOnClickListener(this)
     }
 
-    override fun onClick(v: View?) {
-        if (v != null){
-            when(v.id){
-                R.id.button_polisi -> {
-                    val moveIntent = Intent(this, Polisi::class.java)
+    override fun onClick(p0: View?) {
+        if (p0 != null) {
+            when (p0.id) {
+                R.id.buttonuser -> {
+                    val moveIntent = Intent(this, MainMenu::class.java)
                     startActivities(arrayOf(moveIntent))
                 }
 
-                R.id.button_ambulance -> {
-                    val moveIntent = Intent(this, Ambulance::class.java)
-                    startActivities(arrayOf(moveIntent))
-                }
-
-                R.id.button_pemadam -> {
-                    val moveIntent = Intent(this, Pemadam::class.java)
-                    startActivities(arrayOf(moveIntent))
-                }
-
-                R.id.button_rs -> {
-                    val moveIntent = Intent(this, Rumah_sakit::class.java)
-                    startActivities(arrayOf(moveIntent))
-                }
-
-                R.id.button_sar -> {
-                    val moveIntent = Intent(this, Tim_sar::class.java)
+                R.id.buttonhelper -> {
+                    val moveIntent = Intent(this, LoginHelper::class.java)
                     startActivities(arrayOf(moveIntent))
                 }
             }
         }
     }
+
 }
