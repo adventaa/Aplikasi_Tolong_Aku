@@ -24,7 +24,7 @@ class Ambulance : AppCompatActivity() , View.OnClickListener {
         if (v != null) {
             when (v.id) {
                 R.id.imageButton -> {
-                    val moveIntent = Intent(this, MainActivity::class.java)
+                    val moveIntent = Intent(this, MainMenu::class.java)
                     startActivities(arrayOf(moveIntent))
                 }
 
