@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.ImageButton
 
 class Ambulance : AppCompatActivity() , View.OnClickListener {
+    // komentar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ambulance)
