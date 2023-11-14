@@ -7,9 +7,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.core.content.ContextCompat.startActivities
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 
 class Tim_sar : AppCompatActivity(), View.OnClickListener, OnMapReadyCallback{
+    private var mGoogleMap:GoogleMap? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tim_sar)
@@ -19,6 +22,10 @@ class Tim_sar : AppCompatActivity(), View.OnClickListener, OnMapReadyCallback{
 
         val buttonClick2: Button = findViewById(R.id.button_tolong)
         buttonClick2.setOnClickListener(this)
+
+        val mapFragment = supportFragmentManager
+            .findFragmentById(R.id.mapFragment) as SupportMapFragment
+        mapFragment.getMapAsync(this)
     }
 
     override fun onClick(v: View?) {
@@ -35,6 +42,10 @@ class Tim_sar : AppCompatActivity(), View.OnClickListener, OnMapReadyCallback{
                 }
             }
         }
+    }
+
+    override fun onMapReady(googleMap: GoogleMap) {
+        mGoogleMap = googleMap
     }
 }
 
