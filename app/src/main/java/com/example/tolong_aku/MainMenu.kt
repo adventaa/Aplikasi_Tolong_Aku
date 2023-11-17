@@ -2,10 +2,10 @@ package com.example.tolong_aku
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 
 class MainMenu : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +51,7 @@ class MainMenu : AppCompatActivity(), View.OnClickListener {
                 }
 
                 R.id.button_pemadam -> {
-                    val moveIntent = Intent(this, Pemadam::class.java)
+                    val moveIntent = Intent(this, MainMenu::class.java)
                     startActivities(arrayOf(moveIntent))
                 }
 
