@@ -1,15 +1,15 @@
 package com.example.tolong_aku
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
-import androidx.core.content.ContextCompat.startActivities
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
+import androidx.appcompat.app.AppCompatActivity
+//import androidx.core.content.ContextCompat.startActivities
+//import com.google.android.gms.maps.GoogleMap
+//import com.google.android.gms.maps.OnMapReadyCallback
+//import com.google.android.gms.maps.SupportMapFragment
 
 class Tim_sar : AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {

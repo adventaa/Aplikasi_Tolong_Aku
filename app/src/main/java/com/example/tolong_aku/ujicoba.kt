@@ -1,95 +1,76 @@
-import android.app.ProgressDialog
-import android.graphics.Rect
-import android.location.GpsStatus
-import android.location.Location
-import android.os.Bundle
-import android.util.Log
+package com.example.tolong_aku
 
+import android.os.Bundle
+import android.preference.PreferenceManager
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.common.api.GoogleApiClient
-import com.google.android.gms.location.LocationRequest
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.*
-import com.nic.supperapp.R
-import com.nic.supperapp.databinding.ActivityMainBinding
-import org.osmdroid.api.IMapController
-import org.osmdroid.config.Configuration
-import org.osmdroid.events.MapListener
-import org.osmdroid.events.ScrollEvent
-import org.osmdroid.events.ZoomEvent
+import androidx.core.app.ActivityCompat
+import org.osmdroid.config.Configuration.getInstance
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.views.MapView
-import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider
-import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay
+import java.util.*
 
-class ujicoba : AppCompatActivity(), MapListener, GpsStatus.Listener {
-    lateinit var mMap: MapView
-    lateinit var controller: IMapController;
-    lateinit var mMyLocationOverlay: MyLocationNewOverlay;
+class ujicoba : AppCompatActivity() {
+    private val REQUEST_PERMISSIONS_REQUEST_CODE = 1;
+    private lateinit var map: MapView;
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        Configuration.getInstance().load(
-            applicationContext,
-            getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE)
-        )
-        mMap = binding.osmmap
-        mMap.setTileSource(TileSourceFactory.MAPNIK)
-        mMap.mapCenter
-        mMap.setMultiTouchControls(true)
-        mMap.getLocalVisibleRect(Rect())
+        super.onCreate(savedInstanceState);
 
+        //handle permissions first, before map is created. not depicted here
 
-        mMyLocationOverlay = MyLocationNewOverlay(GpsMyLocationProvider(this), mMap)
-        controller = mMap.controller
+        //load/initialize the osmdroid configuration, this can be done
+        // This won't work unless you have imported this: org.osmdroid.config.Configuration.*
+        getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
+        //setting this before the layout is inflated is a good idea
+        //it 'should' ensure that the map has a writable location for the map cache, even without permissions
+        //if no tiles are displayed, you can try overriding the cache path using Configuration.getInstance().setCachePath
+        //see also StorageUtils
+        //note, the load method also sets the HTTP User Agent to your application's package name, if you abuse osm's
+        //tile servers will get you banned based on this string.
 
-        mMyLocationOverlay.enableMyLocation()
-        mMyLocationOverlay.enableFollowLocation()
-        mMyLocationOverlay.isDrawAccuracyEnabled = true
-        mMyLocationOverlay.runOnFirstFix {
-            runOnUiThread {
-                controller.setCenter(mMyLocationOverlay.myLocation);
-                controller.animateTo(mMyLocationOverlay.myLocation)
-            }
+        //inflate and create the map
+        setContentView(R.layout.activity_main);
+
+        map = findViewById<MapView>(R.id.map)
+        map.setTileSource(TileSourceFactory.MAPNIK);
+    }
+
+    override fun onResume() {
+        super.onResume();
+        //this will refresh the osmdroid configuration on resuming.
+        //if you make changes to the configuration, use
+        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
+        map.onResume(); //needed for compass, my location overlays, v6.0.0 and up
+    }
+
+    override fun onPause() {
+        super.onPause();
+        //this will refresh the osmdroid configuration on resuming.
+        //if you make changes to the configuration, use
+        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //Configuration.getInstance().save(this, prefs);
+        map.onPause();  //needed for compass, my location overlays, v6.0.0 and up
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        val permissionsToRequest = ArrayList<String>();
+        var i = 0;
+        while (i < grantResults.size) {
+            permissionsToRequest.add(permissions[i]);
+            i++;
         }
-        // val mapPoint = GeoPoint(latitude, longitude)
-
-        controller.setZoom(6.0)
-
-        Log.e("TAG", "onCreate:in ${controller.zoomIn()}")
-        Log.e("TAG", "onCreate: out  ${controller.zoomOut()}")
-
-        // controller.animateTo(mapPoint)
-        mMap.overlays.add(mMyLocationOverlay)
-
-        mMap.addMapListener(this)
-
-
+        if (permissionsToRequest.size > 0) {
+            ActivityCompat.requestPermissions(
+                this,
+                permissionsToRequest.toTypedArray(),
+                REQUEST_PERMISSIONS_REQUEST_CODE
+            );
+        }
     }
-
-    override fun onScroll(event: ScrollEvent?): Boolean {
-        // event?.source?.getMapCenter()
-        Log.e("TAG", "onCreate:la ${event?.source?.getMapCenter()?.latitude}")
-        Log.e("TAG", "onCreate:lo ${event?.source?.getMapCenter()?.longitude}")
-        //  Log.e("TAG", "onScroll   x: ${event?.x}  y: ${event?.y}", )
-        return true
-    }
-
-    override fun onZoom(event: ZoomEvent?): Boolean {
-        //  event?.zoomLevel?.let { controller.setZoom(it) }
-
-
-        Log.e("TAG", "onZoom zoom level: ${event?.zoomLevel}   source:  ${event?.source}")
-        return false;
-    }
-
-    override fun onGpsStatusChanged(event: Int) {
-
-
-        TODO("Not yet implemented")
-    }
-
 
 }
