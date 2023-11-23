@@ -12,6 +12,7 @@
         android:background="@drawable/wallpaper"
         />
 
+
     <TextView
         android:id="@+id/RUMAHSAKIT"
         android:layout_width="wrap_content"
@@ -19,7 +20,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginTop="50dp"
         android:text="RUMAH SAKIT"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -37,9 +38,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="239dp"
+        android:layout_marginTop="215dp"
         android:layout_marginRight="135dp"
-        android:layout_marginBottom="342dp"
+        android:layout_marginBottom="366dp"
         android:background="@null"
         android:paddingLeft="6sp"
         android:paddingTop="4sp"
@@ -47,7 +48,6 @@
         android:paddingBottom="4sp"
         android:scaleType="centerCrop"
         android:src="@drawable/dokter" />
-
 
     <TextView
         android:id="@+id/Dokter"
@@ -57,8 +57,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="390dp"
-        android:layout_marginBottom="301dp"
+        android:layout_marginTop="358dp"
+        android:layout_marginBottom="333dp"
         android:text="Layanan Dokter"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -73,8 +73,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="603dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginTop="566dp"
+        android:layout_marginBottom="125dp"
         android:text="Bantuan Ambulance"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -91,11 +91,11 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="113dp"
-        android:layout_marginTop="445dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginRight="106dp"
-        android:layout_marginBottom="133dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="410dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:layout_marginBottom="167dp"
         android:background="@null"
         android:paddingLeft="6sp"
         android:paddingTop="4sp"
@@ -104,13 +104,16 @@
         android:scaleType="centerCrop"
         android:src="@drawable/ambulan" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="67dp"
-        android:layout_height="62dp"
-        android:background="#770202"
-        app:srcCompat="@drawable/skip_back_2"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="1dp" />
+    <Button
+        android:id="@+id/buttonback"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="36dp"
+        android:text="Home"
+        android:textSize="35dp" />
 
 </RelativeLayout>
