@@ -15,7 +15,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-
+            <ImageButton
+                android:id="@+id/buttonKeRumahSakit"
+                android:layout_width="112dp"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="215dp"
+                android:layout_marginRight="135dp"
+                android:layout_marginBottom="366dp"
+                android:background="@null"
+                android:paddingLeft="6sp"
+                android:paddingTop="4sp"
+                android:paddingRight="6sp"
+                android:paddingBottom="4sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dokter" />
         </LinearLayout>
     </HorizontalScrollView>
 </RelativeLayout>
