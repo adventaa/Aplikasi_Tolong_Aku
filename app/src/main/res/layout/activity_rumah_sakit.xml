@@ -4,8 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#770202"
     tools:context=".Rumah_sakit">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallpaper"
+        />
+
+    <TextView
+        android:id="@+id/RUMAHSAKIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="79dp"
+        android:text="RUMAH SAKIT"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+
+    <ImageButton
+        android:id="@+id/buttonDokter"
+        android:layout_width="112dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="239dp"
+        android:layout_marginRight="135dp"
+        android:layout_marginBottom="342dp"
+        android:background="@null"
+        android:paddingLeft="6sp"
+        android:paddingTop="4sp"
+        android:paddingRight="6sp"
+        android:paddingBottom="4sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dokter" />
+
+
+    <TextView
+        android:id="@+id/Dokter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginBottom="301dp"
+        android:text="Layanan Dokter"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Ambulance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="603dp"
+        android:layout_marginBottom="88dp"
+        android:text="Bantuan Ambulance"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/buttonAmbulance"
+        android:layout_width="191dp"
+        android:layout_height="153dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="445dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginRight="106dp"
+        android:layout_marginBottom="133dp"
+        android:background="@null"
+        android:paddingLeft="6sp"
+        android:paddingTop="4sp"
+        android:paddingRight="6sp"
+        android:paddingBottom="4sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ambulan" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -15,56 +112,5 @@
         app:srcCompat="@drawable/skip_back_2"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="1dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="191dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="486dp"
-        app:srcCompat="@drawable/rumah_sakit"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="111dp" />
-
-    <Button
-        android:id="@+id/button_dokter"
-        android:layout_width="188dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="319dp"
-        android:background="@drawable/shape_button"
-        android:backgroundTint="@color/white"
-        android:text="Dokter"
-        android:textColor="@color/white"
-        android:textColorHighlight="@color/black"
-        android:textColorLink="@color/black"
-        app:iconTint="@color/white" />
-
-    <Button
-        android:id="@+id/button_ambulance"
-        android:layout_width="189dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="453dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="212dp"
-        android:text="Ambulance"
-        android:textColor="@color/white" />
 
 </RelativeLayout>
