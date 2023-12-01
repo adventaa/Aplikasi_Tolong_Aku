@@ -12,11 +12,19 @@ class MainMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        replaceFragment(Home())
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
                 R.id.home -> replaceFragment(Home())
+                R.id.berita -> replaceFragment(Berita())
+                R.id.ulasan -> replaceFragment(Ulasan())
+
+                else -> {
+
+                }
             }
+            true
         }
 
     }
