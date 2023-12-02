@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.tolong_aku.databinding.ActivityMainMenuBinding
 
-class MainMenu : AppCompatActivity() {
+class MainMenu : AppCompatActivity(){
     private lateinit var binding : ActivityMainMenuBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
