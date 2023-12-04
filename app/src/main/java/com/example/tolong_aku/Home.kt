@@ -45,15 +45,52 @@ class Home : Fragment(), View.OnClickListener {
 
         val buttonClick: ImageButton = view.findViewById(R.id.button1)
         buttonClick.setOnClickListener(this)
+
+        val buttonClick2: ImageButton = view.findViewById((R.id.button2))
+        buttonClick2.setOnClickListener(this)
+
+        val buttonClick3: ImageButton = view.findViewById((R.id.button3))
+        buttonClick2.setOnClickListener(this)
+
+        val buttonClick4: ImageButton = view.findViewById((R.id.button4))
+        buttonClick2.setOnClickListener(this)
+
+        val buttonClick5: ImageButton = view.findViewById((R.id.button5))
+        buttonClick2.setOnClickListener(this)
+
+        val buttonClick6: ImageButton = view.findViewById((R.id.button6))
+        buttonClick2.setOnClickListener(this)
     }
 
-    override fun onClick(v: View) {
-        when (v.id) {
-            R.id.button1 -> {
-                val phoneNumber = "911"
-                val intent = Intent(Intent.ACTION_DIAL)
-                intent.data =  Uri.parse("tel:$phoneNumber")
-                startActivity(intent)
+    override fun onClick(v: View?) {
+        if(v != null){
+            when (v.id) {
+                R.id.button1 -> {
+                    val phoneNumber = "911"
+                    val intent = Intent(Intent.ACTION_DIAL)
+                    intent.data =  Uri.parse("tel:$phoneNumber")
+                    startActivity(intent)
+                }
+                R.id.button2 -> {
+                    val moveIntent = Intent(this.requireActivity(),Polisi::class.java)
+                    startActivity(moveIntent)
+                }
+                R.id.button3 -> {
+                    val moveIntent = Intent(this.requireActivity(),Rumah_sakit::class.java)
+                    startActivity(moveIntent)
+                }
+                R.id.button4 -> {
+                    val moveIntent = Intent(this.requireActivity(),Pemadam::class.java)
+                    startActivity(moveIntent)
+                }
+                R.id.button5 -> {
+                    val moveIntent = Intent(this.requireActivity(),Ambulance::class.java)
+                    startActivity(moveIntent)
+                }
+                R.id.button6 -> {
+                    val moveIntent = Intent(this.requireActivity(),Tim_sar::class.java)
+                    startActivity(moveIntent)
+                }
             }
         }
     }
