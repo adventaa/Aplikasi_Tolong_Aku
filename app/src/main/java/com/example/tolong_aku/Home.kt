@@ -46,20 +46,20 @@ class Home : Fragment(), View.OnClickListener {
         val buttonClick: ImageButton = view.findViewById(R.id.button1)
         buttonClick.setOnClickListener(this)
 
-        val buttonClick2: ImageButton = view.findViewById((R.id.button2))
+        val buttonClick2: ImageButton = view.findViewById(R.id.button2)
         buttonClick2.setOnClickListener(this)
 
-        val buttonClick3: ImageButton = view.findViewById((R.id.button3))
-        buttonClick2.setOnClickListener(this)
+        val buttonClick3: ImageButton = view.findViewById(R.id.button3)
+        buttonClick3.setOnClickListener(this)
 
-        val buttonClick4: ImageButton = view.findViewById((R.id.button4))
-        buttonClick2.setOnClickListener(this)
+        val buttonClick4: ImageButton = view.findViewById(R.id.button4)
+        buttonClick4.setOnClickListener(this)
 
-        val buttonClick5: ImageButton = view.findViewById((R.id.button5))
-        buttonClick2.setOnClickListener(this)
+        val buttonClick5: ImageButton = view.findViewById(R.id.button5)
+        buttonClick5.setOnClickListener(this)
 
-        val buttonClick6: ImageButton = view.findViewById((R.id.button6))
-        buttonClick2.setOnClickListener(this)
+        val buttonClick6: ImageButton = view.findViewById(R.id.button6)
+        buttonClick6.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
