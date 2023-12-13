@@ -3,6 +3,7 @@ package com.example.tolong_aku
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.tolong_aku.Berita.ui.NewsActivity
 import com.example.tolong_aku.databinding.ActivityMainMenuBinding
 
 class MainMenu : AppCompatActivity(){
@@ -17,7 +18,8 @@ class MainMenu : AppCompatActivity(){
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
                 R.id.home -> replaceFragment(Home())
-                R.id.berita -> replaceFragment(Berita())
+//                R.id.berita-> NewsActivity()
+                R.id.berita-> replaceFragment(Berita())
                 R.id.ulasan -> replaceFragment(Ulasan())
 
                 else -> {
@@ -28,6 +30,8 @@ class MainMenu : AppCompatActivity(){
         }
 
     }
+
+
 
     private fun replaceFragment(fragment: Fragment){
         val fragmentManager = supportFragmentManager

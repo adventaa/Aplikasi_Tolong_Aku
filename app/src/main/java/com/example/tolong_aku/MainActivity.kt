@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             when (p0.id) {
                 R.id.buttonuser -> {
                     val moveIntent = Intent(this, MainMenu::class.java)
+//                    val moveIntent = Intent(this, MainMenuFragment::class.java)
                     startActivities(arrayOf(moveIntent))
                 }
 
