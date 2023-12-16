@@ -31,10 +31,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="641dp"
-        android:src="@drawable/map" />
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="641dp"-->
+<!--        android:src="@drawable/map" />-->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="329dp"
@@ -156,5 +157,10 @@
         app:srcCompat="@drawable/skip_back_2"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="1dp" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="403dp" />
 
 </RelativeLayout>
