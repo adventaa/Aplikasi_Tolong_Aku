@@ -7,16 +7,34 @@
         android:layout_height="wrap_content"
         android:title="Home"
         android:icon="@drawable/baseline_home_24"/>
-    <item
-        android:id="@+id/berita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="Berita"
-        android:icon="@drawable/baseline_newspaper_24"/>
+<!--    <item-->
+<!--        android:id="@+id/berita"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:title="Berita"-->
+<!--        android:icon="@drawable/baseline_newspaper_24"/>-->
     <item
         android:id="@+id/ulasan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Ulasan"
         android:icon="@drawable/baseline_rate_review_24"/>
+
+    <item android:id="@+id/headlines"
+        android:title="Headlines News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_headlines_24"/>
+
+    <item android:id="@+id/favourites"
+        android:title="Favourites News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_favorite_24"/>
+
+    <item android:id="@+id/search"
+        android:title="Search News"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_search_24"/>
 </menu>

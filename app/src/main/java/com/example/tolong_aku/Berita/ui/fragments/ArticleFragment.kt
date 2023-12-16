@@ -7,6 +7,7 @@ import android.webkit.WebViewClient
 import androidx.navigation.fragment.navArgs
 import com.example.tolong_aku.Berita.ui.NewsActivity
 import com.example.tolong_aku.Berita.ui.NewsViewModel
+import com.example.tolong_aku.MainMenu
 import com.example.tolong_aku.R
 import com.example.tolong_aku.databinding.FragmentArticleBinding
 import com.google.android.material.snackbar.Snackbar
@@ -21,7 +22,7 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentArticleBinding.bind(view)
 
-        newsViewModel = (activity as NewsActivity).newsViewModel
+        newsViewModel = (activity as MainMenu).newsViewModel
         val article = args.article
 
         binding.webView.apply {

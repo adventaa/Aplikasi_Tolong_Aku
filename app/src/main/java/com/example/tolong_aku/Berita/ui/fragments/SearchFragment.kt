@@ -26,6 +26,7 @@ import kotlinx.coroutines.launch
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import com.example.tolong_aku.Berita.util.Constants
+import com.example.tolong_aku.MainMenu
 import kotlinx.coroutines.delay
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
@@ -49,7 +50,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         retryButton = view.findViewById(R.id.retryButton)
         errorText = view.findViewById(R.id.errorText)
 
-        newsViewModel = (activity as NewsActivity).newsViewModel
+        newsViewModel = (activity as MainMenu).newsViewModel
         setupSearchRecycler()
 
         newsAdapter.setOnItemClickListener {

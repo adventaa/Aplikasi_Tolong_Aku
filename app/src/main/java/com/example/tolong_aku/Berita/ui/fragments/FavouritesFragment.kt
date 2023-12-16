@@ -14,6 +14,7 @@ import com.example.tolong_aku.R
 import com.example.tolong_aku.databinding.FragmentFavouritesBinding
 import com.google.android.material.snackbar.Snackbar
 import androidx.lifecycle.Observer
+import com.example.tolong_aku.MainMenu
 
 class FavouritesFragment : Fragment(R.layout.fragment_favourites) {
 
@@ -25,7 +26,7 @@ class FavouritesFragment : Fragment(R.layout.fragment_favourites) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentFavouritesBinding.bind(view)
 
-        newsViewModel = (activity as NewsActivity).newsViewModel
+        newsViewModel = (activity as MainMenu).newsViewModel
         setupFavouritesRecycler()
 
         newsAdapter.setOnItemClickListener {

@@ -22,6 +22,7 @@ import com.example.tolong_aku.databinding.FragmentHeadlinesBinding
 import androidx.lifecycle.Observer
 import com.example.tolong_aku.Berita.util.Constants
 import com.example.tolong_aku.Berita.util.Resource
+import com.example.tolong_aku.MainMenu
 
 class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
 
@@ -44,7 +45,7 @@ class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
         retryButton = view.findViewById(R.id.retryButton)
         errorText = view.findViewById(R.id.errorText)
 
-        newsViewModel = (activity as NewsActivity). newsViewModel
+        newsViewModel = (activity as MainMenu). newsViewModel
         setupHeadlinesRecycler()
 
         newsAdapter.setOnItemClickListener {
