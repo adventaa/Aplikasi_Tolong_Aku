@@ -5,36 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_dark"
     tools:context=".Tim_sar_lanjutan">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="297dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="255dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="448dp"
-        android:text="Sesuaikan dengan lokasimu!"
-        android:textColor="@color/white"
-        android:textColorHighlight="#000000"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="641dp"
-        android:src="@drawable/map" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -132,5 +103,10 @@
         android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="403dp" />
 
 </RelativeLayout>

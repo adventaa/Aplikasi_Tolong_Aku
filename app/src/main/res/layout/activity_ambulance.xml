@@ -32,11 +32,6 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="641dp"
-        android:src="@drawable/map" />
-
-    <ImageView
-        android:layout_width="match_parent"
         android:layout_height="329dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -139,6 +134,11 @@
         android:background="@drawable/backgrounlogin"
         android:hint="Masukkan Nomor Telepon "
         android:paddingLeft="43dp" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="403dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
