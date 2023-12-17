@@ -10,4 +10,9 @@
 
     <style name="Theme.Tolong_Aku" parent="Base.Theme.Tolong_Aku" />
 <!--    <style name="Theme.Berita" parent="Base.Theme.Berita" />-->
+
+    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/icon</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.Tolong_Aku</item>
+    </style>
 </resources>

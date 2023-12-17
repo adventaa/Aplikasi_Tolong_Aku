@@ -95,7 +95,10 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     ksp ("com.github.bumptech.glide:compiler:4.12.0")
 
+    // Maps
     implementation ("androidx.navigation:navigation-compose:2.5.1")
-
     implementation ("org.osmdroid:osmdroid-android:6.1.11")
+
+    //Splash Screen
+    implementation ("androidx.core:core-splashscreen:1.0.0")
 }
