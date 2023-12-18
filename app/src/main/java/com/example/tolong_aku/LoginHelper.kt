@@ -14,6 +14,7 @@ class LoginHelper : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
         binding = ActivityLoginHelperBinding.inflate(layoutInflater)
+        //
         setContentView(binding.root)
 
 
