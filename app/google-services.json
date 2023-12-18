@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "544375983664",
+    "project_id": "login-register-firebase-rpl",
+    "storage_bucket": "login-register-firebase-rpl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544375983664:android:f72857c38deb63a7fee7f5",
+        "android_client_info": {
+          "package_name": "com.example.tolong_aku"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqndPVroMgtsUzpYmL-6xIUtfl9Msxpfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
