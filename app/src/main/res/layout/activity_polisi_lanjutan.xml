@@ -49,9 +49,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="21dp"
-        android:layout_marginTop="414dp"
+        android:layout_marginTop="413dp"
         android:layout_marginEnd="316dp"
-        android:layout_marginBottom="231dp"
+        android:layout_marginBottom="232dp"
         app:srcCompat="@drawable/polisi"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="111dp" />
