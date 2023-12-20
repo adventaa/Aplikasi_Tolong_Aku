@@ -45,7 +45,7 @@
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@drawable/backgrounlogin"
+            android:background="@drawable/boxputih3"
             android:hint="Username"
             android:paddingLeft="43dp" />
 
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/backgrounlogin"
+            android:background="@drawable/boxputih3"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingLeft="43dp" />
@@ -69,102 +69,3 @@
         android:layout_centerHorizontal="true"
         android:width="300dp"/>
 </RelativeLayout>
-
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".LoginHelper">-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@drawable/wallpaper"-->
-<!--        />-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="184dp"-->
-<!--        android:layout_height="187dp"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_marginStart="80dp"-->
-<!--        android:layout_marginTop="51dp"-->
-<!--        android:layout_marginEnd="80dp"-->
-<!--        android:layout_marginBottom="80dp"-->
-<!--        android:src="@drawable/icon" />-->
-
-<!--    <com.google.android.material.textfield.TextInputEditText-->
-<!--        android:id="@+id/username"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginStart="30dp"-->
-<!--        android:layout_marginTop="364dp"-->
-<!--        android:layout_marginEnd="30dp"-->
-<!--        android:layout_marginBottom="390dp"-->
-<!--        android:background="@drawable/backgrounlogin"-->
-<!--        android:hint="Username"-->
-<!--        android:paddingLeft="43dp">-->
-<!--    </com.google.android.material.textfield.TextInputEditText>-->
-
-<!--&lt;!&ndash;    <EditText&ndash;&gt;-->
-<!--&lt;!&ndash;        android:id="@+id/username"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_alignParentTop="true"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_alignParentBottom="true"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_marginStart="30dp"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_marginTop="364dp"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_marginEnd="30dp"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_marginBottom="451dp"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:background="@drawable/backgrounlogin"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:hint="Username"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:paddingLeft="43dp" />&ndash;&gt;-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/password"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginStart="30dp"-->
-<!--        android:layout_marginTop="450dp"-->
-<!--        android:layout_marginEnd="30dp"-->
-<!--        android:layout_marginBottom="300dp"-->
-<!--        android:background="@drawable/backgrounlogin"-->
-<!--        android:hint="Password"-->
-<!--        android:inputType="textPassword"-->
-<!--        android:paddingLeft="43dp"-->
-<!--        app:passwordToggleEnabled="true" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/buttonceklogin"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_marginStart="200dp"-->
-<!--        android:layout_marginTop="600dp"-->
-<!--        android:layout_marginEnd="10dp"-->
-<!--        android:layout_marginBottom="150dp"-->
-<!--        android:text="Login"-->
-<!--        android:textSize="35dp" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/login"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginStart="25dp"-->
-<!--        android:layout_marginTop="266dp"-->
-<!--        android:text="Silahkan Login!"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="40sp"-->
-<!--        android:textStyle="bold" />-->
-
-
-
-<!--</RelativeLayout>-->
