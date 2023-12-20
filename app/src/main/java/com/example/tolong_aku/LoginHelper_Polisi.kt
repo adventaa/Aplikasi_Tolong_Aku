@@ -12,13 +12,16 @@ class LoginHelper_Polisi : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginHelperPolisiBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(InformasiPolisi())
+        //replaceFragment(InformasiPolisi())
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
-                R.id.informasi -> replaceFragment(InformasiPolisi())
-                R.id.bantuan-> replaceFragment(BantuanPolisi())
-                R.id.on_going -> replaceFragment(ProcessPolisi())
+//                R.id.informasi -> replaceFragment(InformasiPolisi())
+//                R.id.bantuan-> replaceFragment(BantuanPolisi())
+//                R.id.on_going -> replaceFragment(ProcessPolisi())
+                R.id.informasi -> InformasiPolisi()
+                R.id.bantuan-> BantuanPolisi()
+                R.id.on_going -> ProcessPolisi()
 
                 else -> {
                 }
@@ -26,11 +29,5 @@ class LoginHelper_Polisi : AppCompatActivity() {
             true
         }
 
-    }
-    private fun replaceFragment(fragment: Fragment){
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout, fragment)
-        fragmentTransaction.commit()
     }
 }

@@ -10,7 +10,7 @@ class LoginHelper_RumahSakit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginHelperPolisiBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_login_helper_polisi)
+        setContentView(R.layout.activity_login_helper_rumah_sakit)
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){

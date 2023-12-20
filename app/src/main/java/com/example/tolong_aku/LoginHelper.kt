@@ -43,7 +43,7 @@ class LoginHelper : AppCompatActivity() {
                         startActivity(intent)
                     } else if (email == "timsar1@gmail.com" && pass == "timsar1") {
                         // If user2 credentials match, start User2Activity
-                        val intent = Intent(this, LoginHelper::class.java)
+                        val intent = Intent(this, LoginHelper_TimSar::class.java)
                         startActivity(intent)
                     } else if (email == "ormasambulance1@gmail.com" && pass == "ormass1") {
                         // If user3 credentials match, start User3Activity
@@ -51,7 +51,7 @@ class LoginHelper : AppCompatActivity() {
                         startActivity(intent)
                     } else if (email == "rsambulance1@gmail.com" && pass == "ambulance1") {
                         // If user4 credentials match, start User4Activity
-                        val intent = Intent(this, LoginHelperAmbulance::class.java)
+                        val intent = Intent(this, LoginHelper_RumahSakit::class.java)
                         startActivity(intent)
                     } else {
                         // For other credentials, perform Firebase authentication

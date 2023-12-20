@@ -10,11 +10,11 @@ class LoginHelper_TimSar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginHelperPolisiBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_login_helper_polisi)
+        setContentView(R.layout.activity_login_helper_tim_sar)
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
-                R.id.informasi -> InformasiTimSar
+                R.id.informasi -> InformasiTimSar()
                 R.id.bantuan-> BantuanTimSar()
                 R.id.on_going -> ProcessTimSar()
 
