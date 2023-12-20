@@ -25,58 +25,54 @@ class LoginHelper : AppCompatActivity() {
             val pass = binding.password.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty()) {
-
-                if (email == "polisi@gmail.com" && pass == "polisi1") {
-                    // If the credentials match, start MainActivity
-                    val intent = Intent(this, LoginHelper_Polisi::class.java)
-                    startActivity(intent)
-//                    startActivities(arrayOf(intent))
-                } else {
-                    // For other credentials, perform additional checks
-                    if (email == "pemadam2@gmail.com" && pass == "pemadam1") {
-                        // If admin credentials match, start AdminActivity
-                        val intent = Intent(this, LoginHelper_Pemadam::class.java)
-                        startActivities(arrayOf(intent))
-                    } else if (email == "dokterTirta@gmail.com" && pass == "dokter1") {
-                        // If user1 credentials match, start User1Activity
-                        val intent = Intent(this, LoginHelperDokter::class.java)
-                        startActivity(intent)
-                    } else if (email == "timsar1@gmail.com" && pass == "timsar1") {
-                        // If user2 credentials match, start User2Activity
-                        val intent = Intent(this, LoginHelper_TimSar::class.java)
-                        startActivity(intent)
-                    } else if (email == "ormasambulance1@gmail.com" && pass == "ormass1") {
-                        // If user3 credentials match, start User3Activity
-                        val intent = Intent(this, LoginHelperAmbulance::class.java)
-                        startActivity(intent)
-                    } else if (email == "rsambulance1@gmail.com" && pass == "ambulance1") {
-                        // If user4 credentials match, start User4Activity
-                        val intent = Intent(this, LoginHelper_RumahSakit::class.java)
-                        startActivity(intent)
-                    } else {
-                        // For other credentials, perform Firebase authentication
-                        firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                            if (it.isSuccessful) {
-                                val intent = Intent(this, MainActivity::class.java)
-                                startActivity(intent)
-                            } else {
-                                Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                    }
-                }
+                authenticateUser(email, pass)
             } else {
                 Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
-
             }
+
         }
     }
     override fun onStart() {
         super.onStart()
-
+        val currentUser = firebaseAuth.currentUser
         if(firebaseAuth.currentUser != null){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun authenticateUser(email: String, pass: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
+            if (it.isSuccessful) {
+                val user = firebaseAuth.currentUser
+                if (user != null) {
+                    redirectUser(user.email)
+                }
+            } else {
+                // Authentication failed, show error message
+                Toast.makeText(this, "Authentication failed: ${it.exception?.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun redirectUser(email: String?) {
+        when (email) {
+            "polisi@gmail.com" -> startNewActivity(LoginHelper_Polisi::class.java)
+            "pemadam2@gmail.com" -> startNewActivity(LoginHelper_Pemadam::class.java)
+            "dokterTirta@gmail.com" -> startNewActivity(LoginHelperDokter::class.java)
+            "timsar1@gmail.com" -> startNewActivity(LoginHelper_TimSar::class.java)
+            "ormasambulance1@gmail.com" -> startNewActivity(LoginHelperAmbulance::class.java)
+            "rsambulance1@gmail.com" -> startNewActivity(LoginHelper_RumahSakit::class.java)
+            else -> {
+                // If the email doesn't match any predefined cases, show a default message
+                Toast.makeText(this, "User with email $email is not authorized.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun startNewActivity(activityClass: Class<*>) {
+        val intent = Intent(this, activityClass)
+        startActivity(intent)
+        finish() // Finish the current activity to prevent going back to it
     }
 }

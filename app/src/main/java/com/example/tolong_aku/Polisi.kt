@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONException
 import org.json.JSONObject
@@ -18,6 +19,8 @@ import org.osmdroid.views.MapController
 import org.osmdroid.views.overlay.OverlayItem
 import java.io.IOException
 import java.nio.charset.StandardCharsets
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class Polisi : AppCompatActivity() , View.OnClickListener {
 
@@ -102,4 +105,7 @@ class Polisi : AppCompatActivity() , View.OnClickListener {
             ).show()
         }
     }
+
+
+
 }

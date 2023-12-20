@@ -7,7 +7,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import org.json.JSONException
 import org.json.JSONObject
 import org.osmdroid.config.Configuration
@@ -24,6 +27,7 @@ class Pemadam : AppCompatActivity() , View.OnClickListener {
     var modelMainList: MutableList<ModelMain> = ArrayList()
     lateinit var mapController: MapController
     lateinit var overlayItem: ArrayList<OverlayItem>
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +53,7 @@ class Pemadam : AppCompatActivity() , View.OnClickListener {
 
         val buttonClick2: Button = findViewById(R.id.button_tolong)
         buttonClick2.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
