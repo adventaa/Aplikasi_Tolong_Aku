@@ -2,6 +2,7 @@ package com.example.tolong_aku
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.tolong_aku.databinding.ActivityLoginHelperPemadamBinding
 
 class LoginHelper_Pemadam : AppCompatActivity() {
@@ -10,18 +11,25 @@ class LoginHelper_Pemadam : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginHelperPemadamBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_login_helper_pemadam)
+        setContentView(binding.root)
+        replaceFragment(InformasiPemadam())
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
-                R.id.informasi -> InformasiPemadam()
-                R.id.bantuan-> BantuanPemadam()
-                R.id.on_going -> ProcessPemadam()
+                R.id.informasi -> replaceFragment(InformasiPemadam())
+                R.id.bantuan-> replaceFragment(BantuanPemadam())
+                R.id.on_going -> replaceFragment(ProcessPemadam())
 
                 else -> {
                 }
             }
             true
         }
+    }
+    private fun replaceFragment(fragment: Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.commit()
     }
 }

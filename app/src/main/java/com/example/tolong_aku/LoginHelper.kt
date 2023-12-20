@@ -1,9 +1,9 @@
 package com.example.tolong_aku
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.tolong_aku.databinding.ActivityLoginHelperBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -30,6 +30,7 @@ class LoginHelper : AppCompatActivity() {
                     // If the credentials match, start MainActivity
                     val intent = Intent(this, LoginHelper_Polisi::class.java)
                     startActivity(intent)
+//                    startActivities(arrayOf(intent))
                 } else {
                     // For other credentials, perform additional checks
                     if (email == "pemadam2@gmail.com" && pass == "pemadam1") {
