@@ -31,13 +31,36 @@ class LoginHelper : AppCompatActivity() {
                     val intent = Intent(this, LoginHelper_Polisi::class.java)
                     startActivity(intent)
                 } else {
-                    // For other credentials, perform Firebase authentication
-                    firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            val intent = Intent(this, MainActivity::class.java)
-                            startActivity(intent)
-                        } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                    // For other credentials, perform additional checks
+                    if (email == "pemadam2@gmail.com" && pass == "pemadam1") {
+                        // If admin credentials match, start AdminActivity
+                        val intent = Intent(this, LoginHelper_Pemadam::class.java)
+                        startActivity(intent)
+                    } else if (email == "dokterTirta@gmail.com" && pass == "dokter1") {
+                        // If user1 credentials match, start User1Activity
+                        val intent = Intent(this, LoginHelperDokter::class.java)
+                        startActivity(intent)
+                    } else if (email == "timsar1@gmail.com" && pass == "timsar1") {
+                        // If user2 credentials match, start User2Activity
+                        val intent = Intent(this, LoginHelper::class.java)
+                        startActivity(intent)
+                    } else if (email == "ormasambulance1@gmail.com" && pass == "ormass1") {
+                        // If user3 credentials match, start User3Activity
+                        val intent = Intent(this, LoginHelperAmbulance::class.java)
+                        startActivity(intent)
+                    } else if (email == "rsambulance1@gmail.com" && pass == "ambulance1") {
+                        // If user4 credentials match, start User4Activity
+                        val intent = Intent(this, LoginHelperAmbulance::class.java)
+                        startActivity(intent)
+                    } else {
+                        // For other credentials, perform Firebase authentication
+                        firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
+                            if (it.isSuccessful) {
+                                val intent = Intent(this, MainActivity::class.java)
+                                startActivity(intent)
+                            } else {
+                                Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            }
                         }
                     }
                 }
