@@ -13,6 +13,10 @@
         />
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
     <TextView
         android:id="@+id/RUMAHSAKIT"
         android:layout_width="wrap_content"
@@ -30,14 +34,14 @@
 
     <ImageButton
         android:id="@+id/buttonDokter"
-        android:layout_width="112dp"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="164dp"
+        android:layout_marginStart="224dp"
         android:layout_marginTop="217dp"
         android:layout_marginRight="135dp"
-        android:layout_marginBottom="366dp"
+        android:layout_marginBottom="466dp"
         android:background="@null"
         android:paddingLeft="6sp"
         android:paddingTop="4sp"
@@ -48,13 +52,11 @@
 
     <TextView
         android:id="@+id/Dokter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="358dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginEnd="55dp"
         android:layout_marginBottom="333dp"
         android:text="Layanan Dokter"
         android:textAlignment="center"
@@ -64,13 +66,13 @@
 
     <TextView
         android:id="@+id/Ambulance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="566dp"
+        android:layout_marginTop="626dp"
         android:layout_marginBottom="125dp"
         android:text="Bantuan Ambulance"
         android:textAlignment="center"
@@ -80,24 +82,14 @@
 
     <ImageButton
         android:id="@+id/buttonAmbulance"
-        android:layout_width="191dp"
-        android:layout_height="153dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="115dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="480dp"
         android:layout_marginEnd="104dp"
         android:layout_marginRight="104dp"
-        android:layout_marginBottom="167dp"
+        android:layout_marginBottom="277dp"
         android:background="@null"
-        android:paddingLeft="6sp"
-        android:paddingTop="4sp"
-        android:paddingRight="6sp"
-        android:paddingBottom="4sp"
         android:scaleType="centerCrop"
         android:src="@drawable/ambulan" />
 

@@ -20,46 +20,6 @@
         android:layout_marginBottom="80dp"
         android:layout_centerInParent="true"
         android:src="@drawable/icon" />
-
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="335dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="335dp"
-        android:background="@drawable/backgrounlogin"
-        android:hint="Username"
-        android:paddingLeft="43dp" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="435dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="235dp"
-        android:background="@drawable/backgrounlogin"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:paddingLeft="43dp" />
-
-    <Button
-        android:id="@+id/buttonceklogin"
-        android:layout_width="251dp"
-        android:layout_height="82dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="139dp"
-        android:text="Login"
-        android:textSize="35dp" />
-
     <TextView
         android:id="@+id/login"
         android:layout_width="wrap_content"
@@ -72,6 +32,42 @@
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/isian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:layout_below="@+id/login">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/backgrounlogin"
+            android:hint="Username"
+            android:paddingLeft="43dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/backgrounlogin"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="43dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/buttonceklogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/isian"
+        android:text="Login"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:width="300dp"/>
 </RelativeLayout>
 
 <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
