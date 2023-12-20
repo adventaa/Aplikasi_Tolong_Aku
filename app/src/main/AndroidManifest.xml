@@ -26,9 +26,11 @@
         android:theme="@style/Theme.Tolong_Aku"
         tools:targetApi="31">
         <activity
-            android:name=".LoginHelper_Polisi"
+            android:name=".LoginHelper_Pemadam"
             android:exported="false" />
-        <!-- <activity -->
+        <activity
+            android:name=".LoginHelper_Polisi"
+            android:exported="false" /> <!-- <activity -->
         <!-- android:name=".cobaTimSar" -->
         <!-- android:exported="false" /> -->
         <activity
@@ -88,7 +90,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme = "@style/Theme.App.SplashScreen">
+            android:theme="@style/Theme.App.SplashScreen">
 
             <!-- <activity -->
             <!-- android:name="NewsActivity" -->
