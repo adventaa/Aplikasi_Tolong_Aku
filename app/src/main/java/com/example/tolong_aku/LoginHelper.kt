@@ -36,7 +36,7 @@ class LoginHelper : AppCompatActivity() {
                     if (email == "pemadam2@gmail.com" && pass == "pemadam1") {
                         // If admin credentials match, start AdminActivity
                         val intent = Intent(this, LoginHelper_Pemadam::class.java)
-                        startActivity(intent)
+                        startActivities(arrayOf(intent))
                     } else if (email == "dokterTirta@gmail.com" && pass == "dokter1") {
                         // If user1 credentials match, start User1Activity
                         val intent = Intent(this, LoginHelperDokter::class.java)

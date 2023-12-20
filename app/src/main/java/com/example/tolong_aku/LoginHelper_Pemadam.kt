@@ -12,18 +12,24 @@ class LoginHelper_Pemadam : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginHelperPemadamBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //replaceFragment(InformasiPemadam())
+        replaceFragment(InformasiPemadam())
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
-                R.id.informasi -> InformasiPemadam()
-                R.id.bantuan-> BantuanPemadam()
-                R.id.on_going -> ProcessPemadam()
+                R.id.informasi -> replaceFragment(InformasiPemadam())
+                R.id.bantuan-> replaceFragment(BantuanPemadam())
+                R.id.on_going -> replaceFragment(ProcessPemadam())
 
                 else -> {
                 }
             }
             true
         }
+    }
+    private fun replaceFragment(fragment: Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.commit()
     }
 }

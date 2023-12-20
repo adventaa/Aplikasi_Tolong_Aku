@@ -21,7 +21,6 @@ class MainMenu : AppCompatActivity(){
     lateinit var newsViewModel: NewsViewModel
     lateinit var binding2: ActivityNewsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         binding = ActivityMainMenuBinding.inflate(layoutInflater)
         binding2 = ActivityNewsBinding.inflate(layoutInflater)
@@ -53,7 +52,6 @@ class MainMenu : AppCompatActivity(){
             }
             true
         }
-
     }
 
 
