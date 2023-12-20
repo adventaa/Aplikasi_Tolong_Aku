@@ -42,7 +42,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="25dp"
         android:layout_marginTop="366dp"
-        android:layout_marginBottom="325dp"
+        android:layout_marginBottom="425dp"
         android:text="#kamibersamatolongaku"
         android:textColor="@color/black"
         android:textSize="22sp" />
@@ -80,5 +80,18 @@
         android:layout_marginBottom="139dp"
         android:text="I'm Helper"
         android:textSize="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="824dp"
+        android:layout_marginBottom="66dp"
+        android:text="kelompok4 studios"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
 
 </RelativeLayout>
