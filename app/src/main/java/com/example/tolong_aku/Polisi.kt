@@ -28,6 +28,11 @@ class Polisi : AppCompatActivity() , View.OnClickListener {
     lateinit var mapController: MapController
     lateinit var overlayItem: ArrayList<OverlayItem>
 
+    private lateinit var inputNama: EditText
+    private lateinit var inputNomor: EditText
+    private lateinit var btnSave: Button
+    private lateinit var database: DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_polisi)
@@ -50,8 +55,19 @@ class Polisi : AppCompatActivity() , View.OnClickListener {
         val buttonClick: ImageButton = findViewById(R.id.imageButton)
         buttonClick.setOnClickListener(this)
 
-        val buttonClick2: Button = findViewById(R.id.button_tolong)
-        buttonClick2.setOnClickListener(this)
+        inputNama = findViewById(R.id.nama) // Replace with the actual ID from your layout
+        inputNomor = findViewById(R.id.nomor) // Replace with the actual ID from your layout
+        btnSave = findViewById(R.id.button_tolong) // Replace with the actual ID from your layout
+        database = FirebaseDatabase.getInstance("https://login-register-firebase-rpl-default-rtdb.asia-southeast1.firebasedatabase.app").getReference()
+
+        btnSave.setOnClickListener {
+            val contactId = database.push().key!!
+            val namaValue = inputNama.text.toString().trim()
+            val nomorValue = inputNomor.text.toString().trim()
+            writeNewUser(contactId, namaValue, nomorValue)
+            val moveIntent = Intent(this, Polisi_lanjutan::class.java)
+            startActivities(arrayOf(moveIntent))
+        }
     }
 
     override fun onClick(v: View?) {
@@ -59,11 +75,6 @@ class Polisi : AppCompatActivity() , View.OnClickListener {
             when (v.id) {
                 R.id.imageButton -> {
                     val moveIntent = Intent(this, MainMenu::class.java)
-                    startActivities(arrayOf(moveIntent))
-                }
-
-                R.id.button_tolong -> {
-                    val moveIntent = Intent(this, Polisi_lanjutan::class.java)
                     startActivities(arrayOf(moveIntent))
                 }
             }
@@ -106,6 +117,13 @@ class Polisi : AppCompatActivity() , View.OnClickListener {
         }
     }
 
+    data class User(val nama: String? = null, val nomor: String? = null) {
+        // Null default values create a no-argument default constructor, which is needed
+        // for deserialization from a DataSnapshot.
+    }
+    fun writeNewUser(userId: String, nama: String, nomor: String?) {
+        val user = User(nama, nomor)
 
-
+        database.child("users").child(userId).setValue(user)
+    }
 }
