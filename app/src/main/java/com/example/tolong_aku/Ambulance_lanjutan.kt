@@ -24,6 +24,8 @@ class Ambulance_lanjutan : AppCompatActivity() , View.OnClickListener {
     lateinit var mapController: MapController
     lateinit var overlayItem: ArrayList<OverlayItem>
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_ambulance_lanjutan)
 
         Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this))
 
@@ -39,9 +41,6 @@ class Ambulance_lanjutan : AppCompatActivity() , View.OnClickListener {
         mapController.zoomTo(15)
 
         getLocationMarker()
-
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ambulance_lanjutan)
 
         val buttonClick : Button = findViewById(R.id.button_batal)
         buttonClick.setOnClickListener(this)

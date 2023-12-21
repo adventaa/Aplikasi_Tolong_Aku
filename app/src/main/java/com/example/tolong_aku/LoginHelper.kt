@@ -54,7 +54,7 @@ class LoginHelper : AppCompatActivity() {
             }
         }
     }
-
+    //test
     private fun redirectUser(email: String?) {
         when (email) {
             "polisi@gmail.com" -> startNewActivity(LoginHelper_Polisi::class.java)
